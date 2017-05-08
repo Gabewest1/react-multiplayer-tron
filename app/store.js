@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux"
-import { ConnectedRouter, routerReducer, routerMiddleware, push } from "react-router-redux"
+import { routerReducer, routerMiddleware } from "react-router-redux"
 import { composeWithDevTools } from "redux-devtools-extension"
 import reducers from "./reducers"
 
