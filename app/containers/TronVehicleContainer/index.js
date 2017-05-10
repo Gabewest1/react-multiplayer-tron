@@ -16,7 +16,7 @@ let Button = styled.button`
 
 class TronVehicleContainer extends React.Component {
     componentDidMount() {
-        // setInterval(this.moveTronVehicles.bind(this), 1)
+        
     }
     moveTronVehicles() {
         let { tronVehicles } = this.props
@@ -28,7 +28,6 @@ class TronVehicleContainer extends React.Component {
         })
 
         tronVehicles.forEach((vehicle, vehicleNumber) => {
-            // console.log(vehicle, position[0], position[1] )
             this.props.setVehiclePosition(`tronVehicle${vehicleNumber}`, nextPositions[vehicleNumber][0], nextPositions[vehicleNumber][1])
         })
     }
@@ -45,22 +44,16 @@ class TronVehicleContainer extends React.Component {
     }
 
     render() {
-        console.log(this.props.tronVehicles)
-        const TronVehicles = this.props.tronVehicles.map((vehicle, key) => (
-            <TronVehicle key={key} {...vehicle[`tronVehicle${key}`]} />
-        ))
+ 
         return (
-            <Container>
-                <Button onClick={this.moveTronVehicles.bind(this)} >Move</Button>
-                { TronVehicles }
-            </Container>
+            <TronVehicle {...this.props} />
         )
     }
 }
 
 function mapStateToProps(state) {
     return {
-        ...state.tronVehicle
+        ...state.tronVehicle.toJS()
     }
 }
 

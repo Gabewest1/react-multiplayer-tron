@@ -26,6 +26,7 @@
     "react-router-redux": "^4.0.8",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
+    "reselect": "^3.0.0",
     "socket.io-middleware": "^0.2.1",
     "styled-components": "^1.4.6",
     "webpack": "^2.5.1",

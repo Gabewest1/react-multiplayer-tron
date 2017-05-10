@@ -1,13 +1,13 @@
 import React from "react"
 
-import TronVehicleContainer from "containers/TronVehicleContainer"
+import TronGame from "containers/TronGame"
 import Container from "./Container"
 
 export default class App extends React.Component {
     render() {
         return (
             <Container>
-                <TronVehicleContainer />
+                <TronGame numPlayers={4}/>
             </Container>
         )
     }
