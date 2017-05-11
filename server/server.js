@@ -9,6 +9,7 @@ const compiler = webpack(webpackConfig)
 
 const app = express()
 
+app.use(express.static(path.resolve(__dirname, "..", "app", "assets")))
 app.use(webpackDevMiddleware(compiler, {publicPath: webpackConfig.output.publicPath}))
 app.use(webpackHotMiddleware(compiler))
 

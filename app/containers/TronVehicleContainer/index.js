@@ -7,13 +7,6 @@ import * as actions from "./actions"
 import TronVehicle from "components/TronVehicle"
 import Container from "./Container"
 
-import styled from "styled-components"
-
-let Button = styled.button`
-    margin-top: 300px;
-    margin-left: 500px;
-`
-
 class TronVehicleContainer extends React.Component {
     componentDidMount() {
         

@@ -16,6 +16,10 @@ module.exports = {
                     presets: ["react", "es2015", "stage-0"],
                     plugins: ["react-hot-loader/babel"]
                 },
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
             }
         ]
     },

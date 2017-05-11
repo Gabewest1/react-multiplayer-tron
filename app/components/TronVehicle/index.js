@@ -3,8 +3,9 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 let TronVehicle = styled.div`
-    background-color: ${(props) => props.color}
     position: absolute;
+    display: ${(props) => props.isAlive ? "auto" : "hidden"}
+    background-color: ${(props) => props.color};
     top: ${(props) => props.top};
     left: ${(props) => props.left};
     height: 25px;
@@ -26,6 +27,7 @@ function borderRadius(direction) {
 }
 
 TronVehicle.propTypes = {
+    isAlive: PropTypes.bool.isRequired,
     color: PropTypes.string.isRequired,
     top: PropTypes.number.isRequired,
     left: PropTypes.number.isRequired
