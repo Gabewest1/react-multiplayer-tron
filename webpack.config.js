@@ -23,21 +23,6 @@ module.exports = {
             }
         ]
     },
-    // module: {
-    //     loaders: [
-    //         {
-    //             test:/\.js$/,
-    //             loader: "babel",
-    //             query: {
-    //                 plugins: [
-    //                     "react-hot-loader/babel"
-    //                 ],
-    //                 presets: ["react", "es2015"]
-    //             }
-                
-    //         }
-    //     ]
-    // },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin ()

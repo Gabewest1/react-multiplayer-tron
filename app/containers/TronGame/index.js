@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
 
-import TronVehicle from "containers/TronVehicleContainer"
+import TronVehicle from "components/TronVehicle"
 import Container from "./Container"
 
 import * as actions from "./actions"
@@ -21,8 +21,11 @@ class TronGame extends React.Component {
             let position = positions[i]
             let color = colors[i]   
             let direction = directions[i]
-            console.log(position)
-            props.addVehicle({left: position[0], top: position[1], direction, velocity, color, isAlive: true })
+            let vehicle = {left: position[0], top: position[1], direction, velocity, color, isAlive: true }
+
+            i === 0 ? props.addHuman(vehicle) : props.addComputer(vehicle)
+
+            props.addVehicle(vehicle)
         }
     }
     moveTronVehicles() {

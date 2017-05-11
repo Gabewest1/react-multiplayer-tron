@@ -4,3 +4,17 @@ export function addVehicle(vehicle) {
         vehicle
     }
 }
+
+export function addHuman(vehicle) {
+    return {
+        type: "ADD_HUMAN",
+        vehicle
+    }
+}
+
+export function addComputer(vehicle) {
+    return {
+        type: "ADD_COMPUTER",
+        vehicle
+    }
+}
